@@ -97,7 +97,7 @@ const C=
   const innerRef=useRef(null)
   useClickOutside
   (
-    (e)=> menuClick(true)(e)
+    e=> menuClick(true)(e)
     ,innerRef
   )
   const itemsRef=useRef(null)
@@ -111,9 +111,7 @@ const C=
   }
   const itemClick=
   e=>
-  {
-    menuClick(false)(e)
-  }
+  menuClick(false)(e)
   const el=
   <div onClick={menuClick(false)} ref={innerRef}>
     <Icon>
